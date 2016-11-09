@@ -3,8 +3,36 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversityIot.VitocontrolApi", "Source\UniversityIot.VitocontrolApi\UniversityIot.VitocontrolApi.csproj", "{F90B964C-7B2B-414E-94AA-9A66900FA5FF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{24F5EBDF-7E66-4110-8CE1-9E17FC057425}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversityIot.VitocontrolApi.Tests", "Source\UniversityIot.VitocontrolApi.Tests\UniversityIot.VitocontrolApi.Tests.csproj", "{63C82B95-D1DE-43EB-80D0-789B95245144}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Production|Any CPU = Production|Any CPU
+		Staging|Any CPU = Staging|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F90B964C-7B2B-414E-94AA-9A66900FA5FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F90B964C-7B2B-414E-94AA-9A66900FA5FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F90B964C-7B2B-414E-94AA-9A66900FA5FF}.Production|Any CPU.ActiveCfg = Production|Any CPU
+		{F90B964C-7B2B-414E-94AA-9A66900FA5FF}.Production|Any CPU.Build.0 = Production|Any CPU
+		{F90B964C-7B2B-414E-94AA-9A66900FA5FF}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{F90B964C-7B2B-414E-94AA-9A66900FA5FF}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{63C82B95-D1DE-43EB-80D0-789B95245144}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63C82B95-D1DE-43EB-80D0-789B95245144}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63C82B95-D1DE-43EB-80D0-789B95245144}.Production|Any CPU.ActiveCfg = Production|Any CPU
+		{63C82B95-D1DE-43EB-80D0-789B95245144}.Production|Any CPU.Build.0 = Production|Any CPU
+		{63C82B95-D1DE-43EB-80D0-789B95245144}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{63C82B95-D1DE-43EB-80D0-789B95245144}.Staging|Any CPU.Build.0 = Staging|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{63C82B95-D1DE-43EB-80D0-789B95245144} = {24F5EBDF-7E66-4110-8CE1-9E17FC057425}
 	EndGlobalSection
 EndGlobal
