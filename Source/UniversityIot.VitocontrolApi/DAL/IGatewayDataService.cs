@@ -6,5 +6,6 @@ namespace UniversityIot.VitocontrolApi.DAL
     {
         void CreateGateway(Gateway gateway);
         bool GatewayExists(string serialNumber);
+        void ConnectUserToGateway(User user, Gateway gateway);
     };
 }

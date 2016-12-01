@@ -177,6 +177,8 @@
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="DAL\IUserDataService.cs" />
     <Compile Include="DAL\IGatewayDataService.cs" />
+    <Compile Include="Exceptions\GatewayExistsException.cs" />
+    <Compile Include="Exceptions\IncorrectSerialNumberException.cs" />
     <Compile Include="Models\Gateway.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Global.asax.cs">
@@ -212,7 +214,6 @@
     <None Include="App_Config\Web.Staging.config">
       <DependentUpon>Web.Base.config</DependentUpon>
     </None>
-    <None Include="Properties\PublishProfiles\file.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
