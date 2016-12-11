@@ -1,4 +1,6 @@
-﻿namespace UniversityIot.UsersService.Controllers
+﻿using AutoMapper;
+
+namespace UniversityIot.UsersService.Controllers
 {
     using System.Threading.Tasks;
     using System.Web.Http;
@@ -31,8 +33,8 @@
             {
                 return BadRequest("User does not exist");
             }
-            var model = MapUser(user);
 
+            var model = Mapper.Map<User, UserViewModel>(user);
             return Ok(model);
         }
 
@@ -51,7 +53,7 @@
                 Password = userVM.Password
             });
 
-            UserViewModel createdUserVM = MapUser(createdUser);
+            UserViewModel createdUserVM = Mapper.Map<User, UserViewModel>(createdUser);
             return Created(createdUserVM.Id.ToString(), createdUserVM);
         }
 
@@ -77,33 +79,9 @@
                 return BadRequest(ModelState);
             }
             var updatedUser = await usersDataService.UpdateUserAsync(new User { Id = id, CustomerNumber = editUserViewModel.CustomerNumber });
-            var updatedUserVM = MapUser(updatedUser);
+            var updatedUserVM = Mapper.Map<User, UserViewModel>(updatedUser);
 
             return Ok(updatedUserVM);
-        }
-
-
-        private static UserViewModel MapUser(User user)
-        {
-            var userVM = new UserViewModel()
-            {
-                CustomerNumber = user.CustomerNumber,
-                Id = user.Id,
-                Name = user.Name,
-                Password = user.Password
-            };
-
-            foreach (var userGateway in user.UserGateways)
-            {
-                userVM.UserGateways.Add(new UserGatewayViewModel()
-                {
-                    GatewaySerial = userGateway.GatewaySerial,
-                    Id = userGateway.Id,
-                    AccessType = userGateway.AccessType.ToString()
-                });
-            }
-
-            return userVM;
         }
     }
 }

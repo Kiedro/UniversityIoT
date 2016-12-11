@@ -1,4 +1,8 @@
-﻿namespace UniversityIot.UsersService
+﻿using AutoMapper;
+using UniversityIot.UsersDataAccess.Models;
+using UniversityIot.UsersService.Models;
+
+namespace UniversityIot.UsersService
 {
     using System.Web.Http;
     using System.Web.Http.Dispatcher;
@@ -19,6 +23,7 @@
         {
             MapRoutes(config);            
             RegisterControllerActivator(container);
+            ConfigureMappings();
         }
 
         /// <summary>
@@ -39,6 +44,15 @@
             GlobalConfiguration.Configuration.Services.Replace(
                 typeof(IHttpControllerActivator),
                 new WindsorCompositionRoot(container));
+        }
+
+        private static void ConfigureMappings()
+        {
+            Mapper.Initialize(cfg =>
+            {
+                cfg.CreateMap<User, UserViewModel>();
+                cfg.CreateMap<UserGateway, UserGatewayViewModel>();
+            });
         }
     }
 }
