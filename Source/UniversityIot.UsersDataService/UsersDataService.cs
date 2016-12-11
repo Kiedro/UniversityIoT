@@ -53,12 +53,12 @@
         {
             using (var context = new UsersContext())
             {
-                context.Users.Attach(user);
-                context.Entry(user).State = EntityState.Modified;
+                var userToUpdate = context.Users.Find(user.Id);
+                userToUpdate.CustomerNumber = user.CustomerNumber;
 
                 await context.SaveChangesAsync();
 
-                return user;
+                return userToUpdate;
             }
         }
     }
