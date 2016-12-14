@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace UniversityIot.UsersDataAccess.Models
 {
@@ -13,5 +14,7 @@ namespace UniversityIot.UsersDataAccess.Models
         public string CustomerNumber { get; set; }
 
         public string Password { get; set; }
+
+        public ICollection<UserGateway> UserGateways { get; set; }
     }
 }

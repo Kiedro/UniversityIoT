@@ -78,6 +78,10 @@
     <Compile Include="Migrations\201612122159590_UserConstraints.Designer.cs">
       <DependentUpon>201612122159590_UserConstraints.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612140851125_UserGatewaysInUser.cs" />
+    <Compile Include="Migrations\201612140851125_UserGatewaysInUser.Designer.cs">
+      <DependentUpon>201612140851125_UserGatewaysInUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserGateway.cs" />
@@ -102,6 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612122159590_UserConstraints.resx">
       <DependentUpon>201612122159590_UserConstraints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612140851125_UserGatewaysInUser.resx">
+      <DependentUpon>201612140851125_UserGatewaysInUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
