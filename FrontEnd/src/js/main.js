@@ -31,6 +31,7 @@ controllers.controller('loginController', ['$scope', '$http' , '$state', functio
         e.preventDefault();
         var authorizationHeader = "Basic " + btoa($scope.userName + ":" + $scope.password);
     
+        // Komentarz PWR: protokol http i adres
         $http.get('http://universityiotvitocontrolapi.azurewebsites.net/users/me', {
             headers: {
                 Authorization : authorizationHeader

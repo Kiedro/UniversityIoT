@@ -13,3 +13,4 @@ StyleCop.Cache
 .vs
 Source/_ReSharper.Caches/
 packages/
+FrontEnd/node_modules

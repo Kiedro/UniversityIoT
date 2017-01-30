@@ -20,5 +20,8 @@
     "gulp-uglify": "^1.5.4",
     "gulp-useref": "^3.1.0",
     "run-sequence": "^1.2.1"
+  },
+  "dependencies": {
+    "es6-promise": "^4.0.5"
   }
 }
