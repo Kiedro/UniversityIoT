@@ -73,10 +73,5 @@ namespace University.Selenium.Framework.Pages
         {
             return Page.ExamplePage;
         }
-
-        public ExamplePage goToLink2()
-        {
-            return Page.ExamplePage;
-        }
     } 
 }

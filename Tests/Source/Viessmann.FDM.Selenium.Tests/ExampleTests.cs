@@ -3,6 +3,7 @@ using University.Selenium.Framework.Browser;
 using University.Selenium.Framework.Utilities;
 using OpenQA.Selenium.Support.Events;
 
+
 namespace University.Selenium.Tests
 {
     [TestClass]
@@ -25,11 +26,25 @@ namespace University.Selenium.Tests
             Driver.implicitWait();
 
             //act
-            Page.ExamplePage.goToLink1().goToLink2();
+            Page.ExamplePage.goToLink1();
             
             //assert
             Assert.IsTrue(Page.ExamplePage.checkIfGotToExample());         
         }
+
+        //[TestMethod]
+        //public void CheckIfLoginLabelExists()
+        //{
+        //    //arrange
+        //    Driver.goToExamplePage();
+        //    Driver.implicitWait();
+
+        //    //act
+        //    Page.ExamplePage.goToLink1();
+
+        //    //assert
+        //    Assert.IsTrue(Page.ExamplePage.checkIfGotToExample());
+        //}
 
         [TestCleanup]
         public void Cleanup()
