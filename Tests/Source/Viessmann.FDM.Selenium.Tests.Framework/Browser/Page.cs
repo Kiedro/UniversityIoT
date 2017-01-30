@@ -14,5 +14,15 @@ namespace University.Selenium.Framework.Browser
                 return examplePage;
             }
         }
+
+        public static LoginPage LoginPage
+        {
+            get
+            {
+                var loginPage = new LoginPage();
+                PageFactory.InitElements(Driver.Browser, loginPage);
+                return loginPage;
+            }
+        }
     }
 }

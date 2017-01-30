@@ -36,5 +36,10 @@ namespace University.Selenium.Framework.Browser
         {
             webDriver.Manage().Timeouts().ImplicitlyWait(Settings.implicitWaitTimeout);
         }
+
+        public static void goToLoginPAge()
+        {
+            webDriver.Url = Settings.loginPageLink;
+        }
     }
 }
