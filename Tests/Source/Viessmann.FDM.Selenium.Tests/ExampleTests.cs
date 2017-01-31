@@ -18,19 +18,19 @@ namespace University.Selenium.Tests
 
         }
 
-        [TestMethod]
-        public void ExampleShouldSuccess()
-        {
-            //arrange
-            Driver.goToExamplePage();
-            Driver.implicitWait();
+        //[TestMethod]
+        //public void ExampleShouldSuccess()
+        //{
+        //    //arrange
+        //    Driver.goToExamplePage();
+        //    Driver.implicitWait();
 
-            //act
-            Page.ExamplePage.goToLink1();
+        //    //act
+        //    Page.ExamplePage.goToLink1();
             
-            //assert
-            Assert.IsTrue(Page.ExamplePage.checkIfGotToExample());         
-        }
+        //    //assert
+        //    Assert.IsTrue(Page.ExamplePage.checkIfGotToExample());         
+        //}
 
         //[TestMethod]
         //public void CheckIfLoginLabelExists()
